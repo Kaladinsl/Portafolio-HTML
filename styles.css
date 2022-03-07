@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --background-color: hsl(201, 20%, 70%);
+    --header-text-color: black;
+    --github-icon-color: black; /* rgb(112, 45, 18); */
+    --card-background-color: rgb(208, 212, 212);
+    --main-text-color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.about {
+    width: 100%;
+    padding: 1.5rem 4rem;
+    background-color: #ccc;
+}
+
+.about > .main-title,
+.about > .about-pedro {
+    color: var(--header-text-color);
+}
+
+.main-title {
+    margin: 1rem;
+    font-size: 3rem;
+}
+
+.about-pedro {
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 2rem;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    max-width: 80%;
+    background-color: var(--card-background-color);
+    border-radius: 0.5em;
+    box-shadow: 0 0 15px 1px;
+    transition: transform 100ms ease-in-out;
+    border: 1px solid white;
+}
+
+.project-container:hover {
+    transform: scale(1.05);
+}
+
+.about-project-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 0.75em 0.5em;
+}
+
+.project-container .project-img {
+    width: 100%;
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.project-title {
+    margin: 0;
+    margin-bottom: 0.75rem;
+}
+
+.project-title a {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+.project-description {
+    margin: 0;
+}
+
+.github-icon {
+    position: absolute;
+    fill: var(--github-icon-color);
+    width: 30px;
+    align-self: flex-start;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.25em;
+}
+
+@media screen and (max-width: 1600px) {
+    .container {
+        width: 90%;
+    }
+
+    .project-container {
+        width: 550px;
+        max-width: 80%;
+    }
+}
