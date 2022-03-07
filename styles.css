@@ -78,6 +78,20 @@ body {
     border-radius: 0.5em 0.5em 0 0;
 }
 
+.palabros {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#39da80, #48ebe5);
+}
+
+.palabros > img {
+    height: 100%;
+    width: initial;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
 .project-title {
     margin: 0;
     margin-bottom: 0.75rem;
