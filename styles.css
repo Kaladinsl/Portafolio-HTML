@@ -8,7 +8,7 @@
 :root {
     --background-color: hsl(201, 20%, 70%);
     --header-text-color: black;
-    --github-icon-color: black; /* rgb(112, 45, 18); */
+    --github-icon-color: black;
     --card-background-color: rgb(208, 212, 212);
     --main-text-color: black;
 }
@@ -25,6 +25,11 @@ body {
     background-color: #ccc;
 }
 
+.main-title-container {
+    display: flex;
+    align-items: flex-end;
+}
+
 .about > .main-title,
 .about > .about-pedro {
     color: var(--header-text-color);
@@ -33,6 +38,11 @@ body {
 .main-title {
     margin: 1rem;
     font-size: 3rem;
+    padding: 0;
+}
+
+.subtitle {
+    padding: 0.2rem;
 }
 
 .about-pedro {
@@ -102,6 +112,10 @@ body {
     text-decoration: none;
 }
 
+.project-title a:hover {
+    color: rgb(112, 45, 18);
+}
+
 .project-description {
     margin: 0;
 }
@@ -113,6 +127,10 @@ body {
     align-self: flex-start;
     top: 0.5rem;
     right: 0.5rem;
+}
+
+a:hover .github-icon {
+    fill: rgb(112, 45, 18);
 }
 
 footer {
@@ -133,6 +151,12 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
+    .main-title-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .container {
         width: 100%;
     }
