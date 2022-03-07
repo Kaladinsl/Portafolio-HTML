@@ -134,9 +134,16 @@ a:hover .github-icon {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 2rem;
-    font-size: 1.25em;
+    font-size: 1.5em;
+    margin: 1rem 0;
+}
+
+footer h6 {
+    margin: 1rem;
 }
 
 @media screen and (max-width: 1600px) {
