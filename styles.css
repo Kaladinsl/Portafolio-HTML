@@ -23,6 +23,7 @@ body {
     width: 100%;
     padding: 1.5rem 4rem;
     background-color: #ccc;
+    border-bottom: 0.1em solid black;
 }
 
 .main-title-container {
@@ -48,6 +49,20 @@ body {
 .about-pedro {
     margin: 1rem;
     font-size: 1.5rem;
+}
+
+.navigation-btn {
+    display: inline-block;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    padding: 0;
+    text-decoration: none;
+    color: var(--header-text-color);
+}
+
+.navigation-btn:hover {
+    text-decoration: underline;
+    color: rgb(71, 71, 71);
 }
 
 .container {
@@ -131,6 +146,17 @@ body {
 
 a:hover .github-icon {
     fill: rgb(112, 45, 18);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container iframe {
+    width: 640px;
+    height: 800px;
 }
 
 footer {
