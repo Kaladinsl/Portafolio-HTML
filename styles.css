@@ -287,7 +287,7 @@ footer h6 {
 
     .main-content {
         width: 90%;
-        padding-top: 7.5rem;
+        padding-top: 3rem;
     }
 
     .typewriter {
@@ -311,5 +311,9 @@ footer h6 {
 
     .project-title {
         width: 90%;
+    }
+
+    .contact-container {
+        width: 100%;
     }
 }
