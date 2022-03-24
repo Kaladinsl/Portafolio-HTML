@@ -12,6 +12,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="styles.css" />
+        <script src="modal.js" defer></script>
     </head>
     <body>
         <header class="navbar">
@@ -32,14 +33,17 @@
             </div>
             <div class="navbar-section window-icons-container">
                 <img
+                    data-minimize
                     class="window-icons"
                     src="img/icons/icons8-minimize-window-20.png"
                 />
                 <img
+                    data-maximize
                     class="window-icons"
                     src="img/icons/icons8-restore-window-20.png"
                 />
                 <img
+                    data-btn-close="#modal"
                     class="window-icons"
                     src="img/icons/icons8-close-window-20.png"
                 />
@@ -428,6 +432,19 @@
                 </div>
             </article>
         </section>
+
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h3>Close?</h3>
+                <h3 class="cross-btn" data-cancel-btn>&times;</h3>
+            </div>
+            <h3>Do you really wish to close this awesome page?</h3>
+            <div class="modal-buttons">
+                <button data-cancel-btn>Cancel</button>
+                <button data-close-btn>Close</button>
+            </div>
+        </div>
+        <div id="overlay"></div>
 
         <footer>
             <h6>Last updated: March 2022</h6>
