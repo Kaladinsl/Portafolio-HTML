@@ -117,7 +117,7 @@ body {
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-clip: text;
-    animation: typewriter calc(var(--n) * 0.05s) linear forwards alternate;
+    animation: typewriter calc(var(--n) * 0.04s) linear forwards alternate;
     animation-timing-function: steps(var(--n));
     user-select: none;
 }
