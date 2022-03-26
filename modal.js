@@ -3,6 +3,10 @@ const closeModalBtn = document.querySelectorAll('[data-cancel-btn]');
 const closePageBtn = document.querySelector('[data-close-btn]');
 const overlay = document.getElementById('overlay');
 
+const screen = document.getElementById('screen');
+const background = document.getElementById('taskbar');
+const portfolioIcon = document.querySelector('[data-icon-portfolio]');
+
 const minimizeBtn = document.querySelector('[data-minimize]');
 const maximizeBtn = document.querySelector('[data-maximize]');
 
@@ -20,7 +24,11 @@ closeModalBtn.forEach((btn) => {
     });
 });
 
-closePageBtn.addEventListener('click', () => window.close());
+closePageBtn.addEventListener('click', () => {
+    if (screen.classList[0] === 'screen') {
+        screen.style.display = 'none';
+    }
+});
 
 function openModal(modal) {
     if (modal == null) return;
@@ -36,10 +44,25 @@ function closeModal(modal) {
     overlay.classList.remove('active');
 }
 
-minimizeBtn.addEventListener('click', () =>
-    document.body.classList.add('minimized')
-);
+minimizeBtn.addEventListener('click', () => {
+    screen.classList.add('minimized');
+    background.classList.add('active');
+    document.body.classList.add('active');
+});
 
-maximizeBtn.addEventListener('click', () =>
-    document.body.classList.remove('minimized')
-);
+maximizeBtn.addEventListener('click', () => {
+    screen.classList.toggle('windowed');
+});
+
+portfolioIcon.addEventListener('click', () => {
+    if (screen.style.display == 'none') {
+        modal.classList.remove('active');
+        overlay.classList.remove('active');
+        screen.style.display = 'flex';
+        return;
+    }
+
+    screen.classList.toggle('minimized');
+    background.classList.toggle('active');
+    document.body.classList.toggle('active');
+});

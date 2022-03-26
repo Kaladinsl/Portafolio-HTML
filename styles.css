@@ -15,16 +15,70 @@
 
 body {
     margin: 0;
-    padding: 0;
     background-color: var(--background-color);
-    display: flex;
-    justify-content: center;
-    transition: 750ms ease-in-out;
 }
 
-body.minimized {
-    transform: translate(-87vw, 96.5vh);
+body.active {
+    height: 100vh;
+}
+
+.taskbar {
+    display: flex;
+    height: 3.5rem;
+    width: 100%;
     position: fixed;
+    bottom: 0;
+    background-color: rgb(50, 50, 50);
+    user-select: none;
+}
+
+.taskbar-icon {
+    height: 100%;
+    display: flex;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 0;
+}
+
+.taskbar-icon:hover {
+    background-color: rgba(70, 70, 70, 0.75);
+}
+
+.taskbar-icon > img {
+    height: 100%;
+    align-self: center;
+    user-select: none;
+    border-radius: 50%;
+}
+
+.screen {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    transition: 500ms ease-in-out;
+    opacity: 1;
+    z-index: 1;
+}
+
+.screen.minimized {
+    position: fixed;
+    transform: translate(-70%, 180%);
+    opacity: 0;
+    z-index: -5;
+}
+
+.screen.windowed {
+    transform: scale(70%, 90%);
+    border: 2px solid black;
+    border-radius: 0.25rem;
+}
+
+.screen.windowed.minimized {
+    position: fixed;
+    transform: translate(-70%, 180%);
+    opacity: 0;
+    z-index: -5;
 }
 
 .navbar {
@@ -142,7 +196,7 @@ body.minimized {
     flex-wrap: wrap;
     gap: 4rem;
     padding: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 9rem;
     margin-top: 5rem;
 }
 
@@ -233,6 +287,7 @@ a:hover .github-icon {
 .contact-container iframe {
     width: 640px;
     height: 800px;
+    margin-bottom: 3rem;
 }
 
 footer {
@@ -242,10 +297,14 @@ footer {
     text-align: center;
     font-size: 1.5em;
     position: fixed;
-    bottom: 0;
+    bottom: 3.5rem;
     width: 100%;
     color: white;
     background-color: rgb(77, 77, 77);
+}
+
+.screen.windowed footer {
+    bottom: 0;
 }
 
 footer h6 {
@@ -353,6 +412,10 @@ footer h6 {
 }
 
 @media screen and (max-width: 700px) {
+    .taskbar {
+        display: none;
+    }
+
     .navbar {
         display: flex;
         align-items: center;
@@ -401,6 +464,7 @@ footer h6 {
 
     .container {
         width: 100%;
+        margin-bottom: 4rem;
     }
 
     .project-container {
@@ -418,5 +482,9 @@ footer h6 {
 
     .contact-container iframe {
         height: 850px;
+    }
+
+    footer {
+        bottom: 0;
     }
 }
