@@ -90,6 +90,10 @@ table.cmds-table td {
   width: 50%;
 }
 
+button[data-mobile-button] {
+  display: none;
+}
+
 /****** Projects Folder ******/
 
 section.projects-folder {
@@ -389,5 +393,10 @@ a:hover .github-icon {
     left: 5vw;
     width: 90vw;
     height: 80vh;
+  }
+
+  button[data-mobile-button] {
+    display: block;
+    color: var(--main-text-color);
   }
 }

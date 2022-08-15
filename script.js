@@ -3,6 +3,7 @@ const input = document.querySelector('.input');
 const section = document.querySelector('.cmd');
 const projectsFolder = document.querySelector('.projects-folder');
 const project = document.querySelector('.project');
+const mobileBtn = document.querySelector('[data-mobile-button]');
 
 const helpTable = [
   `
@@ -206,6 +207,16 @@ function returnedData(value) {
 
 function submitCommand() {
   let cmdIndex = 0;
+
+  mobileBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    createNewLine(textarea.value);
+    returnedData(textarea.value);
+    storeCmds(textarea.value);
+
+    textarea.value = '';
+  });
 
   textarea.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
