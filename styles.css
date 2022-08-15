@@ -34,6 +34,9 @@ body {
   background-color: black;
   overflow: auto;
 }
+body.light {
+  background-color: var(--background-color);
+}
 
 .cmd {
   margin: 1em 0.3em;
@@ -116,7 +119,6 @@ section.projects-folder {
 }
 .close-btn {
   font-size: 1.5em;
-  padding: 0.5em;
   color: white;
   text-align: center;
   cursor: pointer;

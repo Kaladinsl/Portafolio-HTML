@@ -43,6 +43,14 @@ const helpTable = [
     </tr>
     <tr>
       <td>
+        cd contact
+      </td>
+      <td>
+        Opens a contact form
+      </td>
+    </tr>
+    <tr>
+      <td>
         start "" resume.pdf
       </td>
       <td>
@@ -54,7 +62,7 @@ const helpTable = [
 `,
 ];
 const cmdsHistory = [];
-const directory = ['projects/', 'README.md', 'resume.pdf', 'github'];
+const directory = ['projects/', 'README.md', 'resume.pdf', 'github', 'contact'];
 
 function textAreaAdjust(element) {
   element.style.height = '1px';
@@ -136,6 +144,7 @@ function returnedData(value) {
       (there's also a mobile app!).</p>
       <br>
       <p>Type 'help' if you want to know more about the available commands</p>
+      <p>Type 'exit' to go to a more visual webpage</p>
     `;
     section.insertBefore(newReturn, input);
     return;
@@ -149,6 +158,28 @@ function returnedData(value) {
 
     input.style.display = 'none';
     setTimeout(() => window.open('projects.html'), 300);
+
+    return;
+  }
+
+  if (value === 'cd contact') {
+    const newReturn = document.createElement('div');
+    newReturn.classList.add('return');
+    newReturn.innerHTML = 'redirecting';
+    section.insertBefore(newReturn, input);
+
+    setTimeout(() => window.open('contact.html'), 300);
+
+    return;
+  }
+
+  if (value === 'cd github') {
+    const newReturn = document.createElement('div');
+    newReturn.classList.add('return');
+    newReturn.innerHTML = 'redirecting to github';
+    section.insertBefore(newReturn, input);
+
+    setTimeout(() => window.open('https://github.com/pedrolampo'), 300);
 
     return;
   }
