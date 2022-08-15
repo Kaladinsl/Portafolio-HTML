@@ -221,3 +221,57 @@ section.projects-folder {
 a:hover .github-icon {
   fill: rgb(112, 45, 18);
 }
+
+/****** Navbar ******/
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(77, 77, 77);
+  border-bottom: 0.1em solid black;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-section {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-btn {
+  display: inline-block;
+  margin: 0.25rem;
+  margin-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--header-text-color);
+  border-left: 1px solid white;
+}
+
+.navigation-btn:first-child {
+  border: none;
+  padding-left: 1rem;
+}
+
+.navigation-btn:hover {
+  text-decoration: underline;
+  color: rgb(161, 161, 161);
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.contact-container iframe {
+  width: 640px;
+  height: 800px;
+  margin-bottom: 3rem;
+}

@@ -148,7 +148,7 @@ function returnedData(value) {
     section.insertBefore(newReturn, input);
 
     input.style.display = 'none';
-    window.open('https://pedro-sanchez.netlify.app/');
+    setTimeout(() => window.open('projects.html'), 300);
 
     return;
   }
