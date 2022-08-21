@@ -254,7 +254,3 @@ function submitCommand() {
 }
 
 submitCommand();
-
-project.addEventListener('dblclick', () => {
-  project.classList.toggle('large');
-});
